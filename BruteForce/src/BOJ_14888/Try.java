@@ -1,4 +1,4 @@
-package BOJ_14888_연산자끼워넣기;
+package BOJ_14888;
 
 import java.util.*;
 

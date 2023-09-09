@@ -1,4 +1,4 @@
-package BOJ_9663_NQueen;
+package BOJ_9663;
 
 import java.io.*;
 import java.util.*;
