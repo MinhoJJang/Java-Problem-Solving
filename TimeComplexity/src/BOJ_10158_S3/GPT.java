@@ -1,4 +1,4 @@
-package BOJ_10158_S4;
+package BOJ_10158_S3;
 
 import java.util.Scanner;
 
