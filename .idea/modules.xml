@@ -4,7 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/BruteForce/BruteForce.iml" filepath="$PROJECT_DIR$/BruteForce/BruteForce.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Java-Problem-Solving.iml" filepath="$PROJECT_DIR$/.idea/Java-Problem-Solving.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Practice/Practice.iml" filepath="$PROJECT_DIR$/Practice/Practice.iml" />
       <module fileurl="file://$PROJECT_DIR$/String/String.iml" filepath="$PROJECT_DIR$/String/String.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TimeComplexity/TimeComplexity.iml" filepath="$PROJECT_DIR$/TimeComplexity/TimeComplexity.iml" />
     </modules>
   </component>
 </project>
