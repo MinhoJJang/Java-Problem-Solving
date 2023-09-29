@@ -24,4 +24,4 @@ public class GPT {
         System.out.printf("%d %d", final_x, final_y);
     }
 }
-// 시간초과
+// 시간초과 -> 그냥 Java 15가 너무 느려서 나타나는 문제임... ㅠ
