@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Array/Array.iml" filepath="$PROJECT_DIR$/Array/Array.iml" />
-      <module fileurl="file://$PROJECT_DIR$/BruteForce/BruteForce.iml" filepath="$PROJECT_DIR$/BruteForce/BruteForce.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BOJ/Array/Array.iml" filepath="$PROJECT_DIR$/BOJ/Array/Array.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BOJ/BOJ.iml" filepath="$PROJECT_DIR$/BOJ/BOJ.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BOJ/BruteForce/BruteForce.iml" filepath="$PROJECT_DIR$/BOJ/BruteForce/BruteForce.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Java-Problem-Solving.iml" filepath="$PROJECT_DIR$/.idea/Java-Problem-Solving.iml" />
       <module fileurl="file://$PROJECT_DIR$/Programmers/LV2/LV2.iml" filepath="$PROJECT_DIR$/Programmers/LV2/LV2.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Practice/Practice.iml" filepath="$PROJECT_DIR$/Practice/Practice.iml" />
       <module fileurl="file://$PROJECT_DIR$/Programmers/Programmers.iml" filepath="$PROJECT_DIR$/Programmers/Programmers.iml" />
-      <module fileurl="file://$PROJECT_DIR$/String/String.iml" filepath="$PROJECT_DIR$/String/String.iml" />
-      <module fileurl="file://$PROJECT_DIR$/TimeComplexity/TimeComplexity.iml" filepath="$PROJECT_DIR$/TimeComplexity/TimeComplexity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BOJ/String/String.iml" filepath="$PROJECT_DIR$/BOJ/String/String.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BOJ/TimeComplexity/TimeComplexity.iml" filepath="$PROJECT_DIR$/BOJ/TimeComplexity/TimeComplexity.iml" />
     </modules>
   </component>
 </project>
