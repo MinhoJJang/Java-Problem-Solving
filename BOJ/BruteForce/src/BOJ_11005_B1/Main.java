@@ -71,3 +71,4 @@ public class Main {
         printIntegerToASCII(convertedNumArray, actualLen, B);
     }
 }
+// 맞았습니다
