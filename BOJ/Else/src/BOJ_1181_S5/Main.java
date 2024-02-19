@@ -40,9 +40,6 @@ public class Main {
         // 길이에 따라 먼저 정렬하고, 길이가 같은 경우 사전순으로 정렬
         Collections.sort(words, (o1, o2) -> {
             // 길이 비교
-            /*
-            Integer.compare()이
-             */
             int lengthCompare = Integer.compare(o1.length(), o2.length());
             // 길이가 같으면 사전순 비교
             if (lengthCompare == 0) {

@@ -30,7 +30,7 @@ public class Main {
 
         for (int i = 0; i < length; i++) {
             str_to_char[i] += shift;
-            if(str_to_char[i] > 51){
+            if (str_to_char[i] > 51) {
                 str_to_char[i] -= 3;
             }
         }
