@@ -1,4 +1,4 @@
-package BOJ_10819_S1;
+package BOJ_1914_S1;
 
 import java.math.BigInteger;
 import java.util.Scanner;
