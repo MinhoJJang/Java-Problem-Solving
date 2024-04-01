@@ -14,6 +14,13 @@ public class Main {
          *    이 점수가 음수가 되는 즉시 NO
          */
 
+
+        /**
+         * stack에 (를 푸쉬
+         * )가 들어오면 stack의 peek()를 하고 (이면 삭제
+         *
+         */
+
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         sc.nextLine();
@@ -21,6 +28,7 @@ public class Main {
         for (int i = 0; i <n; i++) {
             String input = sc.nextLine();
             String res = "YES";
+
             int len = input.length();
             if(len % 2 != 0){
                 res = "NO";
