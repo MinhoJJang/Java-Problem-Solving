@@ -1,5 +1,6 @@
 package week2.BOJ_1357_B1;
 
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Main {
@@ -22,7 +23,6 @@ public class Main {
 
         String X = sc.next();
         String Y = sc.next();
-
         String res = Rev(String.valueOf(Integer.parseInt(Rev(X)) + Integer.parseInt(Rev(Y))));
 
         System.out.println(Integer.parseInt(res));
