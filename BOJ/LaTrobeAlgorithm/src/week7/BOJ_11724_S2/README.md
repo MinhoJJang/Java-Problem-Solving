@@ -1,0 +1,162 @@
+# 연결 요소의 개수
+https://www.acmicpc.net/problem/11724
+
+## 1차 시도
+```java
+package week7.BOJ_11724_S2;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.*;
+
+public class Main {
+
+    static final int VISITED = 1;
+
+    public static void main(String[] args) throws IOException {
+        int N, M, u, v;
+        int[] vis;
+        int cnt = 0;
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        N = Integer.parseInt(st.nextToken());
+        M = Integer.parseInt(st.nextToken());
+        vis = new int[N+1]; // 노드 개수 저장
+        Queue<Integer> queue = new LinkedList<>();
+
+        ArrayList<AbstractMap.SimpleEntry<Integer, Integer>> arr = new ArrayList<>();
+        for (int i = 0; i < M; i++) {
+            st = new StringTokenizer(br.readLine());
+            u = Integer.parseInt(st.nextToken());
+            v = Integer.parseInt(st.nextToken());
+
+            arr.add(new AbstractMap.SimpleEntry<>(u, v));
+            arr.add(new AbstractMap.SimpleEntry<>(v, u));
+        }
+
+        // ArrayList를 순회한다.
+        for (AbstractMap.SimpleEntry<Integer, Integer> e : arr) {
+
+            int a = e.getKey();
+            int b = e.getValue();
+
+            // 만약 e의 key, value가 이미 방문했던 노드라면 패스
+            // 1,2 or 2,1 을 두 번 방문하는 걸 막기위한 것임
+            if (vis[a] == VISITED && vis[b] == VISITED) continue;
+
+            // 새로운 시작점이다! 새로운 시작점이므로 큐에 넣고 방문 표시를 넣어주자
+            vis[a] = VISITED;
+            vis[b] = VISITED;
+            queue.add(a);
+            queue.add(b);
+
+            // 근데 이렇게하면 같은 노드에 대해 큐를 여러번 삽입하게 되니 시간낭비가 된다.
+            // 처음 방문하는 노드만 큐에 넣어주자
+            // 아니다 어차피 하나만 방문하고 하나는 방문하지 않은 경우의 수는 존재하지 않는다
+            // 왜? 아래 큐에서 전부 작업할테니까
+
+            while (!queue.isEmpty()){
+                int start = queue.poll();
+                // 이제 이 start 점이, 내 근처 노드를 찾는 작업이다.
+                // 따라서 ArrayList 중에서 start가 포함되어 있는 좌표를 모두 찾는다.
+                // 나는 무방향으로 했으니, start가 1이라면 key가 1인 점에 대해서만 찾으면 된다.
+                // 그리고 그 찾은 좌표에 대해서, value가 방문하지 않은 상태여야 한다.
+                // 그 value에 대해서 visited 해주고 큐에 넣어준다.
+
+                for(AbstractMap.SimpleEntry<Integer, Integer> conn : arr){
+                    if(conn.getKey() == start){
+                        int value = conn.getValue();
+                        if(vis[value] != VISITED){
+                            vis[value] = VISITED;
+                            queue.add(value);
+                        }
+                    }
+                }
+            }
+
+            cnt ++;
+        }
+
+        System.out.println(cnt);
+    }
+}
+
+```
+
+결과는 시간초과
+왜??
+아니 무려 3초나 주는데;
+
+일단 위 코드에서 비효율적인 점이 좀 많다...
+인접 리스트나 인접 행렬이 아니기 때문에 모든 ArrayList를 뒤져야 하는데 이건 문제가 많다. 
+
+이걸 인접 리스트 형태로 다시 구현해보자. 
+
+## 2차 시도
+
+```java
+package week7.BOJ_11724_S2;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.*;
+
+public class Main2 {
+    static final int VISITED = 1;
+
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine());
+
+        int N = Integer.parseInt(st.nextToken());
+        int M = Integer.parseInt(st.nextToken());
+        
+        // 인접 리스트를 구현하기 위해
+        List<List<Integer>> graph = new ArrayList<>();
+        
+        // 내부 리스트는 따로 초기화해줘야한다.
+        for (int i = 0; i <= N; i++) {
+            graph.add(new ArrayList<>());
+        }
+
+        for (int i = 0; i < M; i++) {
+            st = new StringTokenizer(br.readLine());
+            int u = Integer.parseInt(st.nextToken());
+            int v = Integer.parseInt(st.nextToken());
+            
+            // 이런게 있다고??
+            // 이게 인접 리스트구나..........!!!!!!!!!
+            // 리스트 안의 리스트 !!
+            graph.get(u).add(v);
+            graph.get(v).add(u);
+        }
+
+        int cnt = 0;
+        int[] vis = new int[N+1];
+        Queue<Integer> queue = new LinkedList<>();
+
+        for (int i = 1; i <= N; i++) {
+            if (vis[i] == VISITED) continue;
+
+            queue.add(i);
+            vis[i] = VISITED;
+            while (!queue.isEmpty()) {
+                int node = queue.poll();
+                for (int neighbor : graph.get(node)) {
+                    if (vis[neighbor] != VISITED) {
+                        vis[neighbor] = VISITED;
+                        queue.add(neighbor);
+                    }
+                }
+            }
+            cnt++;
+        }
+
+        System.out.println(cnt);
+    }
+}
+
+```
