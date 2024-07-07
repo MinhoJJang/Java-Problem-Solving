@@ -1,4 +1,4 @@
-package week11.BOJ_15565_S1;
+package week12.BOJ_15565_S1;
 
 import java.io.*;
 import java.util.*;
