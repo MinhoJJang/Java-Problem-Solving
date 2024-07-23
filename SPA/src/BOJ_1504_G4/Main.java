@@ -33,7 +33,6 @@ public class Main {
         int E = Integer.parseInt(st.nextToken());
 
         ArrayList<ArrayList<Path>> graph = new ArrayList<>();
-
         for (int i = 0; i <= N + 1; i++) {
             graph.add(new ArrayList<>());
         }
