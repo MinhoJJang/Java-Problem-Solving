@@ -1,4 +1,4 @@
-package week3.BOJ_1182_S2;
+package BOJ_1182_S2;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package week2.BOJ_1158_S4;
+package BOJ_1158_S4;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
