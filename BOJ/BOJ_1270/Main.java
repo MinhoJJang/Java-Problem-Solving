@@ -38,7 +38,6 @@ public class Main {
                     break;
                 }
             }
-
             sb.append(answer + "\n");
         }
         System.out.println(sb);
