@@ -24,6 +24,7 @@ public class Main {
             String[] range = input.split(",");
             int cnt = 0;
 
+
             for(String s : range){
                 String[] r = s.split("-");
                 int len = r.length;
