@@ -27,7 +27,6 @@ public class Main {
         ArrayList<ArrayList<Integer>> arr = new ArrayList<>();
         int[] visited = new int[N + 1];
         int[] answer = new int[N + 1];
-        
 
         for (int i = 0; i <= N; i++) {
             arr.add(new ArrayList<>());
@@ -53,9 +52,10 @@ public class Main {
 
         while (!queue.isEmpty()) {
             int cur = queue.poll();
-            
-            for(int next : arr.get(cur)) {
-                if(visited[next] == 1) continue;
+
+            for (int next : arr.get(cur)) {
+                if (visited[next] == 1)
+                    continue;
                 visited[next] = 1;
                 queue.add(next);
                 answer[next] = ++seq;
