@@ -1,7 +1,7 @@
 {
     "java.debug.settings.onBuildFailureProceed": true,
     "java.project.sourcePaths": [
-        "BOJ/LaTrobeAlgorithm/src/week13",
-        "BOJ"
+        "BOJ",
+        "2290번： LCD Test"
     ]
 }
