@@ -2,6 +2,7 @@
     "java.debug.settings.onBuildFailureProceed": true,
     "java.project.sourcePaths": [
         "BOJ",
-        "2290번： LCD Test"
+        "2290번： LCD Test",
+        "3048번： 개미"
     ]
 }
