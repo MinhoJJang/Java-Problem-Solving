@@ -15,7 +15,7 @@ import java.util.*;
 
 public class Main {
 
-    static int[] num = new int[] {50, 10, 5, 1};
+    static int[] num = new int[] { 50, 10, 5, 1 };
     static ArrayList<Set<Integer>> answer;
 
     public static void main(String[] args) throws IOException {
@@ -27,7 +27,7 @@ public class Main {
         for (int i = 0; i < 21; i++) {
             answer.add(new HashSet<>());
         }
-    
+
         answer.get(0).add(0);
         for (int i = 0; i < n; i++) {
             fn(i);
@@ -36,8 +36,8 @@ public class Main {
         System.out.println(answer.get(n).size());
     }
 
-    static void fn(int n){
-        for(int cur : answer.get(n)){
+    static void fn(int n) {
+        for (int cur : answer.get(n)) {
             for (int i = 0; i < num.length; i++) {
                 answer.get(n + 1).add(cur + num[i]);
             }
