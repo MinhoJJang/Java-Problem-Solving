@@ -52,7 +52,7 @@ public class Main {
         int cnt = 0;
 
         for (int i = 1; i <= N; i++) {
-            if(member_score[i] == candidate_score){
+            if (member_score[i] == candidate_score) {
                 cnt++;
                 answer.add(i);
             }
@@ -60,7 +60,7 @@ public class Main {
 
         System.out.println(candidate_score + " " + cnt);
         for (Integer candidate : answer) {
-            System.out.print(candidate + " "); 
+            System.out.print(candidate + " ");
         }
 
     }
