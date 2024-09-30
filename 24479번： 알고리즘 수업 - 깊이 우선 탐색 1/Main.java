@@ -13,12 +13,9 @@
 import java.io.*;
 import java.util.*;
 
-import javax.swing.SortingFocusTraversalPolicy;
-
 public class Main {
 
-    static Stack<Integer> stack = new Stack<>();
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
@@ -47,12 +44,21 @@ public class Main {
             Collections.sort(graph.get(i));
         }
 
+        dfs(graph, visited, R);
+
+        for (int i = 1; i <= N; i++) {
+            System.out.println(visited[i]);
+        }
     }
 
+    static int idx = 1;
+
     static void dfs(ArrayList<ArrayList<Integer>> graph, int[] visited, int R) {
-        visited[R] = 1;
+        visited[R] = idx++;
         for (int i : graph.get(R)) {
-            if (visited[i] == 0) dfs(graph, visited, i);
+            if (visited[i] == 0) {
+                dfs(graph, visited, i);
+            }
         }
     }
 }
