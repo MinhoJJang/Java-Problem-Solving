@@ -2,7 +2,8 @@
     "java.debug.settings.onBuildFailureProceed": true,
     "java.project.sourcePaths": [
         "BOJ",
+        "14940번： 쉬운 최단거리",
         "14284번： 간선 이어가기 2",
-        "14940번： 쉬운 최단거리"
+        "17141번： 연구소 2"
     ]
 }
