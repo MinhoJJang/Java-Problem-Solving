@@ -1,9 +1,8 @@
 # 24479번: 알고리즘 수업 - 깊이 우선 탐색 1 - <img src="https://static.solved.ac/tier_small/9.svg" style="height:20px" /> Silver II
 
 <!-- performance -->
-
-<!-- 문제 제출 후 깃허브에 푸시를 했을 때 제출한 코드의 성능이 입력될 공간입니다.-->
-
+### 성능 요약
+메모리: 103624 KB, 시간: 1544 ms
 <!-- end -->
 
 ## 문제
