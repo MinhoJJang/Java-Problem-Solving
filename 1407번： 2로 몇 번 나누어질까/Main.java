@@ -26,10 +26,11 @@ public class Main {
         BigInteger answer = B.subtract(A);
 
         while (true) {
-            BigInteger div = BigInteger.valueOf((long)Math.pow(2, e++));
+            BigInteger div = BigInteger.valueOf((long) Math.pow(2, e++));
             BigInteger a = A.divide(div);
             BigInteger b = B.divide(div);
-            if(b.equals(BigInteger.ZERO)) break;
+            if (b.equals(BigInteger.ZERO))
+                break;
             answer = answer.add((b.subtract(a)).multiply(div.divide(BigInteger.TWO)));
         }
 
